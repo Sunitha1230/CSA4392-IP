@@ -1,0 +1,22 @@
+<?php
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "beauty";
+$conn = new mysqli($host, $username, $password, $database);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$name = $_POST['name'];
+$regid = $_POST['regid'];
+$datein = $_POST['datein'];
+$menu= $_POST['menu'];
+$sql = "INSERT INTO ordering (name, regid, datein, menu) VALUES ('$name', '$regid', '$datein','$menu')";
+if ($conn->query($sql) === TRUE) {
+    echo "Booking successful";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+?>
+

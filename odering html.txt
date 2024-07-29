@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+</head>
+<body>
+<h2>Online beauty parlour</h2>
+<form action="ordering.php" method="post">
+<label for="name">name:</label>
+<input type="text" id="name" name="name" required><br><br>
+<label for="regid">regid:</label>
+<input type="text" id="regid" name="regid" required><br><br>
+<label for="datein">datein:</label>
+<input type="date" id="datein" name="datein" required><br><br>
+<label for="menu">menu:</label>
+<select name="menu" id="menu" >
+<option value="facepack">facepack</option>
+<option value="hk">hk</option>
+</select>
+<br><br>
+<input type="submit" value="Login">
+</form>
+</body>
+</html>
+
